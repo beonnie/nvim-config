@@ -1,17 +1,11 @@
 return require('packer').startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
-  use "EdenEast/nightfox.nvim"
-  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+
   use 'neovim/nvim-lspconfig'
+  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
   use 'simrat39/rust-tools.nvim'
   use 'nvim-lua/plenary.nvim'
-  use 'preservim/nerdtree'
-
-  use {
-  'nvim-lualine/lualine.nvim',
-  requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  }
 
       -- nvim-cmp
   use {
@@ -30,5 +24,12 @@ return require('packer').startup(function()
         { "hrsh7th/cmp-cmdline" },
       },}
 
-      
+  use {
+  'nvim-lualine/lualine.nvim',
+  requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
+  
+  use 'EdenEast/nightfox.nvim'
+  use 'preservim/nerdtree'
+	  
  end)
